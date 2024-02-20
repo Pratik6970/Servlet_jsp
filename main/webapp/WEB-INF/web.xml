@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>BookShop2</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp </welcome-file>
+    
+   <welcome-file>authsd.jsp </welcome-file>
+   
+   <welcome-file>subjectsd.jsp </welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>BookShopController</servlet-name>
+  <servlet-class>Controllers.BookShopControllerServlet</servlet-class>
+  <init-param>
+  <param-name>books</param-name>
+  <param-value>/books.jsp</param-value>
+  </init-param>
+  <init-param>
+  <param-name>showcart</param-name>
+  <param-value>/showcart.jsp</param-value>
+  </init-param>
+  <init-param>
+  <param-name>addcart</param-name>
+  <param-value>/addcart.jsp</param-value>
+  </init-param>
+  <init-param>
+  <param-name>subjectsd</param-name>
+  <param-value>/subjectsd2.jsp</param-value>
+  </init-param>
+  <init-param>
+  <param-name>login</param-name>
+  <param-value>/login.jsp</param-value>
+  </init-param>
+  <init-param>
+  <param-name>logout</param-name>
+  <param-value>/logout.jsp</param-value>
+  </init-param>
+  <init-param>
+  <param-name>register</param-name>
+  <param-value>/register.jsp</param-value>
+  </init-param>
+  <init-param>
+  <param-name>authsd</param-name>
+  <param-value>/authsd.jsp</param-value>
+  </init-param>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>BookShopController</servlet-name>
+  <url-pattern>/ctl</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  <filter-name>LoggingFilter</filter-name>
+  <filter-class>Controllers.LoggingFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>LoggingFilter</filter-name>
+  <url-pattern>/ctl</url-pattern>
+  </filter-mapping>
+  
+  </web-app>
+  
+  
+
+  
+   
+  
+  
+  
+    
+  
+  
+  
