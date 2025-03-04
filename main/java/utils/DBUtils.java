@@ -14,7 +14,7 @@ public class DBUtils {
 		public static Connection fetchDBConnection() throws ClassNotFoundException, SQLException{
 			if (connection == null) {
 				String url = "jdbc:mysql://localhost:3306/dac22?useSSL=false&allowPublicKeyRetrieval=true";
-				connection = DriverManager.getConnection(url, "root","Pratik@123");
+				connection = DriverManager.getConnection(url, "root","Pratik@123456");
 			}
 			return connection;
 		}
